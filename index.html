@@ -45,27 +45,107 @@
                 <tr onmouseout="mira_stop()" onmouseover="mira_start()">
                     <td style="padding:60px;width:25%;vertical-align:middle">
                     <div class="one">
-                        <img src='images/action.jpg' width="260">
+                        <img src='images/medsynv2_results_modifyingMask.png' width="260">
                     </div>
                     </td>
                     <td style="padding:20px;width:75%;vertical-align:middle">
-                    <a href="https://arxiv.org/abs/2206.02307">
-                        <papertitle>Bootstrapping Semi-supervised Medical Image Segmentation with Anatomical-aware Contrastive Distillation</papertitle>
+                    <a href="https://github.com/batmanlab/MedSynV2/blob/main/assets/ECCV_2026_medsynv2.pdf">
+                        <papertitle>MedSynV2: Flexible Control of 3D CT Generation via Text and Semantically-Defined Segmentation Prompts</papertitle>
                     </a>
                     <br>
-                    <a href="http://chenyuyou.me/">Chenyu You</a>, <strong>Weicheng Dai</strong>, 
-                    <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>,
-                    <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>,
-                    <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a>,
+                    <strong>Weicheng Dai</strong>, 
+                    <a href="https://chyuwang.com/">Chenyu Wang</a>,
+                    <a href="https://shantanu-ai.github.io/">Shantanu Ghosh</a>,
+                    <a href="https://www.batman-lab.com/">Kayhan Batmanghelich</a>,
                     <br>
-                    <em>Accepted by Information Processing in Medical Imaging (IPMI 2023)</em>
+                    <em>Accepted by European Conference on Computer Vision (ECCV 2026)</em>
                     <p></p>
                     <p>
-                        In this work, we present ACTION, an Anatomical-aware ConTrastive dIstillatiON framework, for semi-supervised medical image segmentation. 
-                        
+
+In this work, we propose MedSynV2, a flexible multimodal framework for controllable volumetric image generation that supports input from radiology reports and segmentation prompts (both optional). 
+Our approach allows users to provide segmentation of a specific anatomy or abnormality without requiring full-organ annotations. 
+The semantic meaning of the segmentation mask is specified through an accompanying text description, resulting in a highly flexible and scalable conditioning mechanism.                     </p>
+                    </td>
+                </tr>	
+
+                <tr onmouseout="mira_stop()" onmouseover="mira_start()">
+                    <td style="padding:60px;width:25%;vertical-align:middle">
+                    <div class="one">
+                        <img src='images/phydict_overview.png' width="260">
+                    </div>
+                    </td>
+                    <td style="padding:20px;width:75%;vertical-align:middle">
+                    <a href="https://github.com/batmanlab/PhyDiCT/blob/main/assets/phydict_miccai2026.pdf">
+                        <papertitle>PhyDiCT: Plug-and-Play CT Reconstruction from Sparse X-Rays via Differentiable Rendering and Strong Priors</papertitle>
+                    </a>
+                    <br>
+                    <strong>Weicheng Dai</strong>, 
+                    <a href="https://shantanu-ai.github.io/">Shantanu Ghosh</a>,
+                    <a href="https://www.batman-lab.com/">Kayhan Batmanghelich</a>,
+                    <br>
+                    <em>Accepted by International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2026)</em>
+                    <p></p>
+                    <p>
+
+PhyDiCT is a training-free, plug-and-play framework for reconstructing 3D lung CT volumes from sparse X-ray projections. It combines a differentiable physics-based forward model grounded in the Beer-Lambert law, a frozen text-conditioned diffusion model as a strong 3D CT prior, and split Gibbs sampling to jointly enforce projection fidelity and prior consistency. Without any task-specific training or fine-tuning, PhyDiCT outperforms fully trained CT reconstruction methods, achieving up to +7.5% SSIM on public 3D CT benchmarks.     
                     </p>
                     </td>
                 </tr>	
+
+
+                <tr onmouseout="mira_stop()" onmouseover="mira_start()">
+                    <td style="padding:60px;width:25%;vertical-align:middle">
+                    <div class="one">
+                        <img src='images/CFR.png' width="260">
+                    </div>
+                    </td>
+                    <td style="padding:20px;width:75%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2403.07241">
+                        <papertitle>Calibrating Multi-modal Representations: A Pursuit of Group Robustness without Annotations</papertitle>
+                    </a>
+                    <br>
+                    <a href="http://chenyuyou.me/">Chenyu You</a>,  
+                    <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>,
+                    <strong>Weicheng Dai</strong>,
+                    <a href="https://statistics.yale.edu/people/jas-sekhon">Jasjeet S. Sekhon</a>,
+                    <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>,
+                    <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a>,
+                    <br>
+                    <em>Accepted by The IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR 2024)</em>
+                    <p></p>
+                    <p>
+                        In this work, we propose CFR, which focuses on exploring mitigating the reliance on spurious features for CLIP without using any group annotation. 
+                        We showcase a lightweight representation calibration method for fine-tuning CLIP, by first generating a calibration set using the pretrained CLIP, and then calibrating representations of samples within this set through contrastive learning.</p>
+                    </td>
+                </tr>
+
+
+                <tr onmouseout="mira_stop()" onmouseover="mira_start()">
+                    <td style="padding:60px;width:25%;vertical-align:middle">
+                    <div class="one">
+                        <img src='images/stratified.png' width="260">
+                    </div>
+                    </td>
+                    <td style="padding:20px;width:75%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2302.01735">
+                        <papertitle>Rethinking Semi-Supervised Medical Image Segmentation: A Variance-Reduction Perspective</papertitle>
+                    </a>
+                    <br>
+                    <a href="http://chenyuyou.me/">Chenyu You</a>, <strong>Weicheng Dai</strong>, 
+                    <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>
+                    <a href="https://fenglinliu.com/">Fenglin Liu</a>,
+                    <a href="https://xiaoranzhang.com/">Xiaoran Zhang</a>,
+                    <a href="https://ibme.ox.ac.uk/people/david-clifton/">David A. Clifton</a>,
+                    <a href="https://www.linkedin.com/in/s-kevin-zhou-231a094b/">S Kevin Zhou</a>,
+                    <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>,
+                    <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a>,
+                    <br>
+                    <em>Accepted by Conference on Neural Information Processing Systems (NeurIPS 2023)</em>
+                    <p></p>
+                    <p>
+                        Two practical solutions via stratified group sampling theory that correct for the variance introduced by the common sampling practice, and achieve significant performance benefits. </p>
+                    </td>
+                </tr>
 
                 <tr onmouseout="mira_stop()" onmouseover="mira_start()">
                     <td style="padding:60px;width:25%;vertical-align:middle">
@@ -97,56 +177,27 @@
                 <tr onmouseout="mira_stop()" onmouseover="mira_start()">
                     <td style="padding:60px;width:25%;vertical-align:middle">
                     <div class="one">
-                        <img src='images/stratified.png' width="260">
+                        <img src='images/action.jpg' width="260">
                     </div>
                     </td>
                     <td style="padding:20px;width:75%;vertical-align:middle">
-                    <a href="https://arxiv.org/abs/2302.01735">
-                        <papertitle>Rethinking Semi-Supervised Medical Image Segmentation: A Variance-Reduction Perspective</papertitle>
+                    <a href="https://arxiv.org/abs/2206.02307">
+                        <papertitle>Bootstrapping Semi-supervised Medical Image Segmentation with Anatomical-aware Contrastive Distillation</papertitle>
                     </a>
                     <br>
                     <a href="http://chenyuyou.me/">Chenyu You</a>, <strong>Weicheng Dai</strong>, 
-                    <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>
-                    <a href="https://fenglinliu.com/">Fenglin Liu</a>,
-                    <a href="https://xiaoranzhang.com/">Xiaoran Zhang</a>,
-                    <a href="https://ibme.ox.ac.uk/people/david-clifton/">David A. Clifton</a>,
-                    <a href="https://www.linkedin.com/in/s-kevin-zhou-231a094b/">S Kevin Zhou</a>,
+                    <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>,
                     <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>,
                     <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a>,
                     <br>
-                    <em>Accepted by Conference on Neural Information Processing Systems (NeurIPS 2023)</em>
+                    <em>Accepted by Information Processing in Medical Imaging (IPMI 2023)</em>
                     <p></p>
                     <p>
-                        Two practical solutions via stratified group sampling theory that correct for the variance introduced by the common sampling practice, and achieve significant performance benefits. </p>
+                        In this work, we present ACTION, an Anatomical-aware ConTrastive dIstillatiON framework, for semi-supervised medical image segmentation. 
+                        
+                    </p>
                     </td>
-                </tr>
-
-
-                <tr onmouseout="mira_stop()" onmouseover="mira_start()">
-                    <td style="padding:60px;width:25%;vertical-align:middle">
-                    <div class="one">
-                        <img src='images/action++.png' width="260">
-                    </div>
-                    </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
-                    <a href="http://arxiv.org/abs/2304.02689">
-                        <papertitle>ACTION++: Improving Semi-supervised Medical Image Segmentation with Adaptive Anatomical Contrast</papertitle>
-                    </a>
-                    <br>
-                    <a href="http://chenyuyou.me/">Chenyu You</a>, <strong>Weicheng Dai</strong>, 
-                    <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>
-                    <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>,
-                    <a href="https://statistics.yale.edu/people/jas-sekhon">Jasjeet S. Sekhon</a>,
-                    <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a>,
-                    <br>
-                    <em>Early accepted by International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2023)</em>
-                    <p></p>
-                    <p>
-                        In this work, we present ACTION++, an improved contrastive learning framework with adaptive anatomical contrast for semi-supervised medical segmentation. We propose an adaptive supervised
-                        contrastive loss, where we compute the optimal locations of class
-                        centers uniformly distributed on the embedding space. We also use dynamic Tau to yield better separation between majority and minority classe. </p>
-                    </td>
-                </tr>
+                </tr>	
 
                 <tr onmouseout="mira_stop()" onmouseover="mira_start()">
                     <td style="padding:60px;width:25%;vertical-align:middle">
@@ -175,28 +226,29 @@
                 <tr onmouseout="mira_stop()" onmouseover="mira_start()">
                     <td style="padding:60px;width:25%;vertical-align:middle">
                     <div class="one">
-                        <img src='images/CFR.png' width="260">
+                        <img src='images/action++.png' width="260">
                     </div>
                     </td>
                     <td style="padding:20px;width:75%;vertical-align:middle">
-                    <a href="https://arxiv.org/abs/2403.07241">
-                        <papertitle>Calibrating Multi-modal Representations: A Pursuit of Group Robustness without Annotations</papertitle>
+                    <a href="http://arxiv.org/abs/2304.02689">
+                        <papertitle>ACTION++: Improving Semi-supervised Medical Image Segmentation with Adaptive Anatomical Contrast</papertitle>
                     </a>
                     <br>
-                    <a href="http://chenyuyou.me/">Chenyu You</a>,  
-                    <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>,
-                    <strong>Weicheng Dai</strong>,
-                    <a href="https://statistics.yale.edu/people/jas-sekhon">Jasjeet S. Sekhon</a>,
+                    <a href="http://chenyuyou.me/">Chenyu You</a>, <strong>Weicheng Dai</strong>, 
+                    <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>
                     <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>,
+                    <a href="https://statistics.yale.edu/people/jas-sekhon">Jasjeet S. Sekhon</a>,
                     <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a>,
                     <br>
-                    <em>Accepted by The IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR 2024)</em>
+                    <em>Early accepted by International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2023)</em>
                     <p></p>
                     <p>
-                        In this work, we propose CFR, which focuses on exploring mitigating the reliance on spurious features for CLIP without using any group annotation. 
-                        We showcase a lightweight representation calibration method for fine-tuning CLIP, by first generating a calibration set using the pretrained CLIP, and then calibrating representations of samples within this set through contrastive learning.</p>
+                        In this work, we present ACTION++, an improved contrastive learning framework with adaptive anatomical contrast for semi-supervised medical segmentation. We propose an adaptive supervised
+                        contrastive loss, where we compute the optimal locations of class
+                        centers uniformly distributed on the embedding space. We also use dynamic Tau to yield better separation between majority and minority classe. </p>
                     </td>
                 </tr>
+
 
             </td>
         </tr>
