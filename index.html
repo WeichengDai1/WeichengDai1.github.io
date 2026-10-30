@@ -1,261 +1,289 @@
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-
-    <title>Weicheng Dai</title>
-    
-    <meta name="author" content="Weicheng Dai">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Weicheng Dai">
+  <meta name="description" content="Weicheng Dai — PhD student at Boston University. Research in computer and medical vision, and explainable machine learning.">
+  <meta name="color-scheme" content="light dark">
+  <title>Weicheng Dai · Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+  :root {
+    --bg:#f7f8fa;--surface:#fff;--surface-soft:#f1f4f8;--ink:#1a2937;--ink-soft:#3e4c5b;--muted:#697586;--line:#e3e8ed;--accent:#2b6884;--accent-dark:#134d69;--accent-soft:#e9f3f5;
+    --shadow:0 14px 42px rgba(18,48,71,.045);--round:18px;--font:'DM Sans', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  @media (prefers-color-scheme:dark) { html:not([data-theme="light"]) { --bg:#101820;--surface:#18242e;--surface-soft:#202d38;--ink:#f3f6f7;--ink-soft:#c7d2d8;--muted:#9daeb8;--line:#2c3945;--accent:#8bd0d5;--accent-dark:#8bd0d5;--accent-soft:#193740;--shadow:0 16px 45px rgba(0,0,0,.13) } }
+  html[data-theme="dark"] { --bg:#101820;--surface:#18242e;--surface-soft:#202d38;--ink:#f3f6f7;--ink-soft:#c7d2d8;--muted:#9daeb8;--line:#2c3945;--accent:#8bd0d5;--accent-dark:#8bd0d5;--accent-soft:#193740;--shadow:0 16px 45px rgba(0,0,0,.13) }
+  [hidden]{display:none!important}
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:100px}
+  body{margin:0;background:var(--bg);color:var(--ink);font:400 15.5px/1.75 var(--font);-webkit-font-smoothing:antialiased;transition:background .2s,color .2s}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:4px;border-radius:5px}
+  ::selection{background:var(--accent-soft);color:var(--ink)}
+  .site-nav{height:75px;position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 90%, transparent);border-bottom:1px solid var(--line);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+  .nav-inner{max-width:1140px;height:100%;margin:auto;padding:0 34px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.035em;font-family:Manrope,var(--font);font-size:17px;white-space:nowrap}
+  .brand-mark{display:grid;place-items:center;width:36px;height:36px;border:1px solid color-mix(in srgb,var(--accent) 55%,transparent);border-radius:11px;background:var(--accent-soft);color:var(--accent-dark);font-size:13px;letter-spacing:-.05em}
+  .nav-right{display:flex;align-items:center;gap:29px}
+  .nav-right>a{color:var(--muted);font-size:13px;font-weight:650;transition:color .15s}
+  .nav-right>a:hover{color:var(--accent)}
+  .theme-toggle{border:1px solid var(--line);background:var(--surface);color:var(--ink-soft);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;cursor:pointer;transition:background .2s,transform .2s}
+  .theme-toggle:hover{background:var(--accent-soft);transform:rotate(-12deg)}
+  .theme-toggle svg{width:18px;height:18px}
+  .container{width:min(100% - 68px,1072px);margin:0 auto}
+  .hero{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(290px,.68fr);gap:clamp(35px,5.5vw,92px);align-items:center;padding:91px 0 104px}
+  .eyebrow{margin:0 0 22px;color:var(--accent-dark);font-size:11.5px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;display:flex;align-items:center;gap:11px}
+  .eyebrow::before{content:"";height:2px;width:24px;background:var(--accent);display:block}
+  h1,h2,h3,p{margin-top:0}
+  h1{font-family:Manrope,var(--font);font-size:clamp(57px,7.6vw,92px);line-height:1.03;font-weight:800;letter-spacing:-.085em;margin:0 0 28px}
+  .dot{color:var(--accent)}
+  .research-focus{font-family:Manrope,var(--font);font-size:20px;font-weight:650;line-height:1.5;letter-spacing:-.035em;max-width:580px;margin:0 0 24px;color:var(--ink)}
+  .hero-bio{max-width:615px;font-size:14.5px;line-height:1.9;color:var(--ink-soft);margin:0 0 29px}
+  .hero-bio a{color:var(--accent-dark);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 35%,transparent);text-underline-offset:3px;text-decoration-thickness:1px}
+  .hero-bio a:hover{text-decoration-color:var(--accent)}
+  .social-links{display:flex;gap:9px;flex-wrap:wrap}
+  .social-link{display:flex;align-items:center;gap:8px;padding:9px 14px;background:var(--surface);border:1px solid var(--line);border-radius:12px;font-size:12px;font-weight:700;color:var(--ink-soft);transition:transform .16s,background .16s,border .16s}
+  .social-link:hover{background:var(--accent-soft);border-color:var(--accent);transform:translateY(-2px);color:var(--accent-dark)}
+  .social-link svg{width:15px;height:15px}
+  .portrait-wrap{align-self:stretch;position:relative;min-height:450px;max-height:530px;border-radius:21px;background:linear-gradient(150deg,#dfe9ee,#bdccd8);border:1px solid rgba(29,76,101,.1);box-shadow:var(--shadow);overflow:hidden}
+  .portrait-wrap::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 20% 15%,rgba(255,255,255,.7),transparent 50%);z-index:1}
+  .portrait-wrap::after{content:"";position:absolute;width:160px;height:160px;right:-45px;top:-53px;border:1px solid rgba(255,255,255,.4);border-radius:50%;pointer-events:none;z-index:2}
+  .portrait-wrap img{display:block;width:100%;height:100%;position:relative;z-index:2;object-fit:cover;object-position:center 28%}
+  .portrait-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:Manrope,var(--font);font-size:115px;letter-spacing:-.13em;font-weight:800;color:rgba(30,77,103,.38)}
+  .portrait-label{position:absolute;z-index:3;bottom:19px;left:19px;background:color-mix(in srgb,var(--surface) 91%,transparent);backdrop-filter:blur(14px);padding:10px 14px;border:1px solid rgba(255,255,255,.45);border-radius:11px;display:flex;flex-direction:column;line-height:1.4;gap:2px;box-shadow:0 7px 20px rgba(0,0,0,.08)}
+  .portrait-label strong{font-size:12px;color:var(--ink);letter-spacing:-.02em}
+  .portrait-label span{font-size:10px;color:var(--muted)}
+  .section-head{display:flex;align-items:end;justify-content:space-between;gap:26px;margin-bottom:22px;border-top:1px solid var(--line);padding-top:55px}
+  .section-index{color:var(--accent-dark);font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}
+  h2{font-family:Manrope,var(--font);font-size:clamp(31px,3.6vw,43px);letter-spacing:-.063em;line-height:1.2;font-weight:800;margin-bottom:9px}
+  .section-sub{color:var(--muted);font-size:14px;margin-bottom:0}
+  .research{padding-bottom:86px}
+  .paper-list{display:grid;gap:16px;margin-top:26px}
+  .paper{display:grid;grid-template-columns:260px minmax(0,1fr);gap:27px;background:var(--surface);border:1px solid var(--line);border-radius:var(--round);padding:20px;box-shadow:0 3px 22px rgba(19,43,60,.018);transition:transform .2s,box-shadow .2s,border-color .2s}
+  .paper:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--accent) 26%,var(--line))}
+  .paper-visual{display:block;position:relative;min-height:195px;height:100%;border-radius:11px;overflow:hidden;background:#e3edf0;isolation:isolate}
+  .visual-fallback{position:absolute;inset:0;background:linear-gradient(140deg,#e6eff1 0%,#c8dade 100%);overflow:hidden;color:#23546c}
+  .visual-fallback::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;border:1px solid rgba(51,105,117,.22);right:-70px;top:-145px;box-shadow:0 0 0 40px rgba(255,255,255,.1),0 0 0 80px rgba(255,255,255,.09)}
+  .visual-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(63,116,132,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(63,116,132,.08) 1px,transparent 1px);background-size:20px 20px;mask-image:linear-gradient(to bottom,transparent,#000)}
+  .visual-no{position:absolute;top:12px;left:16px;font:700 11px/1 var(--font);letter-spacing:.1em;opacity:.6}
+  .visual-name{position:absolute;left:16px;bottom:29px;font:800 clamp(22px,2.3vw,29px)/1.1 Manrope,var(--font);letter-spacing:-.07em;max-width:90%}
+  .visual-bottom{position:absolute;left:17px;bottom:13px;font-size:9px;letter-spacing:.06em;text-transform:uppercase;font-weight:750;opacity:.64}
+  .paper-image{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;display:block;background:var(--surface-soft);transition:transform .35s}
+  .paper:hover .paper-image{transform:scale(1.025)}
+  .paper-image.is-broken{display:none}
+  .visual-open{position:absolute;right:11px;top:11px;z-index:3;display:grid;place-items:center;width:28px;height:28px;border-radius:8px;color:var(--ink);background:color-mix(in srgb,var(--surface) 93%,transparent);font-size:17px;line-height:1;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+  .paper-content{min-width:0;align-self:center;padding:1px 2px 2px 0}
+  .paper-meta{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:11px}
+  .venue-tag{display:inline-flex;padding:3px 9px;border-radius:6px;background:var(--accent-soft);color:var(--accent-dark);font-size:10px;line-height:1.7;font-weight:800;letter-spacing:.04em}
+  .paper-index{color:var(--muted);font-size:10px;font-weight:750;letter-spacing:.09em}
+  .paper-content h3{font:800 clamp(17px,1.9vw,20px)/1.43 Manrope,var(--font);letter-spacing:-.036em;margin:0 0 9px}
+  .paper-content h3 a:hover{color:var(--accent-dark)}
+  .title-arrow{color:var(--accent);font-size:16px;white-space:nowrap;font-weight:700}
+  .authors{color:var(--ink-soft);font-size:12.5px;line-height:1.75;margin:0 0 5px}
+  .authors a{text-decoration:underline;text-decoration-color:transparent;text-underline-offset:3px;transition:color .15s,text-decoration-color .15s}
+  .authors a:hover{color:var(--accent-dark);text-decoration-color:var(--accent)}
+  .authors strong{font-weight:800;color:var(--ink)}
+  .venue-full{color:var(--accent-dark);font-size:12px;font-weight:600;font-style:italic;margin:0 0 11px}
+  .paper-description{color:var(--muted);font-size:12.7px;line-height:1.77;margin:0}
+  .footer{border-top:1px solid var(--line);padding:26px 0 38px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:var(--muted);font-size:12px}
+  .footer a{color:var(--accent-dark);font-weight:700}
+  .back-top{white-space:nowrap}
+  @media(max-width:860px){.hero{gap:32px;grid-template-columns:minmax(0,1fr) 255px;padding:62px 0 78px}.portrait-wrap{min-height:360px}.paper{grid-template-columns:205px minmax(0,1fr);gap:20px}.paper-visual{min-height:175px}.research-focus{font-size:18px}}
+  @media(max-width:660px){.container{width:min(100% - 36px,1072px)}.nav-inner{padding:0 18px}.site-nav{height:65px}.nav-right{gap:16px}.nav-right>a{font-size:12px}.nav-right>a:first-child{display:none}.hero{display:flex;flex-direction:column-reverse;align-items:stretch;gap:33px;padding:30px 0 63px}.portrait-wrap{align-self:auto;min-height:0;height:335px;max-height:none}.portrait-wrap img{object-position:center 30%}h1{font-size:clamp(50px,15vw,75px);margin-bottom:20px}.eyebrow{margin-bottom:13px}.hero-bio{font-size:14px}.social-link{padding:9px 11px}.section-head{display:block;padding-top:35px;margin-bottom:15px}.paper-list{margin-top:20px}.paper{display:block;padding:15px}.paper-visual{height:185px;min-height:0;margin-bottom:15px}.paper-content{padding:0 2px 5px}.paper-content h3{font-size:18px}.footer{align-items:start;flex-direction:column;gap:5px}}
+  @media(max-width:380px){.brand{font-size:15px}.brand-mark{width:31px;height:31px}.nav-right{gap:9px}.social-link{font-size:11px}.nav-right>a:nth-child(2){display:none}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+  </style>
+  <script>
+   try { var savedTheme=localStorage.getItem('wd-theme'); if(savedTheme==='dark'||savedTheme==='light')document.documentElement.dataset.theme=savedTheme; } catch(e) {}
+  </script>
 </head>
-
-
-<body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr style="padding:0px">
-            <td style="padding:0px">
-                <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-                    <tr style="padding:0px">
-                        <td style="padding:2.5%;width:63%;vertical-align:middle">
-                            <p style="text-align:center">
-                                <name>Weicheng Dai</name>
-                            </p>
-                            <p>I am currently a PhD student at Boston University, where I am very fortunately advised by Professor <a href="https://batman-lab.com/">Kayhan Batmanghelich</a>. Previously I worked at Yale University for Professor <a href="https://medicine.yale.edu/profile/julius-chapiro/">Julius Chapiro</a> and Professor <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a>. I was also working closely with Professor <a href="http://chenyuyou.me/">Chenyu You</a>. I obtained a Master degree in Computer Science at New York University. My research interests include computer & medical vision, and explainable machine learning.
-                            </p>
-                            <p style="text-align:center">
-                                <a href="mailto:daiweicheng4536@gmail.com">Email</a> &nbsp/&nbsp
-                                <a href="https://www.linkedin.com/in/weicheng-dai-2926851bb/">LinkedIn</a> &nbsp/&nbsp
-                                <a href="https://github.com/WeichengDai1/">Github</a> &nbsp/&nbsp
-                                <a href="https://scholar.google.com/citations?user=FrXt_bsAAAAJ">Google Scholar</a>
-                            </p>
-                        </td>
-                        <td style="padding:2.5%;width:40%;max-width:40%">
-                            <a href="images/self.jpg">
-                                <img style="width:100%;max-width:100%" alt="profile photo" src="images/self.jpg" class="hoverZoomLink"></a>
-                        </td>
-                    </tr>
-                </tbody></table>
-                <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-                    <tr>
-                    <td style="padding:20px;width:100%;vertical-align:middle">
-                    <heading>Research</heading>
-                    </td>
-                </tr>
-                </tbody></table>
-                <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-                
-                <tr onmouseout="mira_stop()" onmouseover="mira_start()">
-                    <td style="padding:60px;width:25%;vertical-align:middle">
-                    <div class="one">
-                        <img src='images/medsynv2_results_modifyingMask.png' width="260">
-                    </div>
-                    </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
-                    <a href="https://link.springer.com/chapter/10.1007/978-3-032-37517-9_22#citeas">
-                        <papertitle>MedSynV2: Flexible Control of 3D CT Generation via Text and Semantically-Defined Segmentation Prompts</papertitle>
-                    </a>
-                    <br>
-                    <strong>Weicheng Dai</strong>, 
-                    <a href="https://chyuwang.com/">Chenyu Wang</a>,
-                    <a href="https://shantanu-ai.github.io/">Shantanu Ghosh</a>,
-                    <a href="https://www.batman-lab.com/">Kayhan Batmanghelich</a>,
-                    <br>
-                    <em>Accepted by European Conference on Computer Vision (ECCV 2026)</em>
-                    <p></p>
-                    <p>
-
-In this work, we propose MedSynV2, a flexible multimodal framework for controllable volumetric image generation that supports input from radiology reports and segmentation prompts (both optional). 
+<body id="top">
+  <header class="site-nav">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">WD</span>Weicheng Dai</a>
+      <div class="nav-right">
+        <a href="#about">About</a><a href="#research">Research</a><a href="mailto:daiweicheng4536@gmail.com">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light or dark appearance" title="Toggle theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M20.5 15.6A9 9 0 0 1 8.4 3.5a9 9 0 1 0 12.1 12.1Z"/></svg></button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="about" class="hero container" aria-labelledby="person-name">
+      <div class="hero-copy">
+        <p class="eyebrow">PhD student · Boston University</p>
+        <h1 id="person-name">Weicheng<br>Dai<span class="dot">.</span></h1>
+        <p class="research-focus">Computer &amp; medical vision.<br>Explainable machine learning.</p>
+        <p class="hero-bio">I am currently a PhD student at Boston University, where I am very fortunately advised by Professor <a href="https://batman-lab.com/">Kayhan Batmanghelich</a>. Previously I worked at Yale University for Professor <a href="https://medicine.yale.edu/profile/julius-chapiro/">Julius Chapiro</a> and Professor <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a>. I was also working closely with Professor <a href="http://chenyuyou.me/">Chenyu You</a>. I obtained a Master degree in Computer Science at New York University. My research interests include computer & medical vision, and explainable machine learning.</p>
+        <div class="social-links" aria-label="Contact and academic profiles"><a class="social-link" href="mailto:daiweicheng4536@gmail.com" ><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 6.5L20.5 6"/></svg><span>Email</span></a>
+<a class="social-link" href="https://www.linkedin.com/in/weicheng-dai-2926851bb/" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9v10M5 5v.01M10 19v-10h4v1.5c.6-1.1 1.9-1.8 3.2-1.6 1.9.1 2.8 1.5 2.8 3.7V19M10 14.5V9"/></svg><span>LinkedIn</span></a>
+<a class="social-link" href="https://github.com/WeichengDai1/" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19.5c-4.1 1.3-4.1-2.3-5.7-2.7m11.4 5v-3.1c0-1 .3-1.8.7-2.1-3.8-.4-7.7-1.8-7.7-7.7 0-1.7.6-3.1 1.6-4.1-.1-.5-.7-2 .2-4 0 0 1.3-.4 4.3 1.8a14.8 14.8 0 0 1 7.8 0c3-2.2 4.2-1.8 4.2-1.8.9 2 .3 3.5.2 4 1 1 1.6 2.4 1.6 4.1 0 5.9-3.9 7.3-7.7 7.7.4.3.7 1.1.7 2.1v3.1" transform="translate(-1.7 0) scale(.9)"/></svg><span>Github</span></a>
+<a class="social-link" href="https://scholar.google.com/citations?user=FrXt_bsAAAAJ" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2-10 8 10 8 10-8-10-8z"/><path d="M7 14v4.7c3.3 2.4 6.7 2.4 10 0V14"/></svg><span>Google Scholar</span></a></div>
+      </div>
+      <div class="portrait-wrap">
+        <div class="portrait-placeholder" aria-hidden="true">WD.</div>
+        <img id="portrait" src="images/self.jpg" data-fallback="https://weichengdai1.github.io/images/self.jpg" alt="Portrait of Weicheng Dai" fetchpriority="high" decoding="async">
+        <div class="portrait-label"><strong>Weicheng Dai</strong><span>Boston University · Research</span></div>
+      </div>
+    </section>
+    <section id="research" class="research container" aria-labelledby="research-title">
+      <div class="section-head">
+        <div>
+          <div class="section-index">01 / Research</div>
+          <h2 id="research-title">Research &amp; publications<span class="dot">.</span></h2>
+          <p class="section-sub">A collection of research in computer and medical vision.</p>
+        </div>
+      </div>
+      <div class="paper-list">
+<article class="paper" aria-labelledby="paper-title-1">
+        <a class="paper-visual" href="https://link.springer.com/chapter/10.1007/978-3-032-37517-9_22#citeas" target="_blank" rel="noopener noreferrer" aria-label="Open MedSynV2: Flexible Control of 3D CT Generation via Text and Semantically-Defined Segmentation Prompts">
+          <span class="visual-fallback" aria-hidden="true"><span class="visual-grid"></span><span class="visual-no">01</span><span class="visual-name">MedSynV2</span><span class="visual-bottom">ECCV / 2026</span></span>
+          <img class="paper-image" src="images/medsynv2_results_modifyingMask.png" data-fallback="https://weichengdai1.github.io/images/medsynv2_results_modifyingMask.png" alt="Research illustration for MedSynV2" loading="lazy" decoding="async">
+          <span class="visual-open" aria-hidden="true">↗</span>
+        </a>
+        <div class="paper-content">
+          <div class="paper-meta"><span class="venue-tag">ECCV 2026</span><span class="paper-index">NO. 01</span></div>
+          <h3 id="paper-title-1"><a href="https://link.springer.com/chapter/10.1007/978-3-032-37517-9_22#citeas" target="_blank" rel="noopener noreferrer">MedSynV2: Flexible Control of 3D CT Generation via Text and Semantically-Defined Segmentation Prompts<span class="title-arrow" aria-hidden="true"> ↗</span></a></h3>
+          <p class="authors"><strong>Weicheng Dai</strong>, <a href="https://chyuwang.com/">Chenyu Wang</a>, <a href="https://shantanu-ai.github.io/">Shantanu Ghosh</a>, <a href="https://www.batman-lab.com/">Kayhan Batmanghelich</a></p>
+          <p class="venue-full">Accepted by European Conference on Computer Vision (ECCV 2026)</p>
+          <p class="paper-description">In this work, we propose MedSynV2, a flexible multimodal framework for controllable volumetric image generation that supports input from radiology reports and segmentation prompts (both optional). 
 Our approach allows users to provide segmentation of a specific anatomy or abnormality without requiring full-organ annotations. 
-The semantic meaning of the segmentation mask is specified through an accompanying text description, resulting in a highly flexible and scalable conditioning mechanism.                     </p>
-                    </td>
-                </tr>	
-
-                <tr onmouseout="mira_stop()" onmouseover="mira_start()">
-                    <td style="padding:60px;width:25%;vertical-align:middle">
-                    <div class="one">
-                        <img src='images/phydict_overview.png' width="260">
-                    </div>
-                    </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
-                    <a href="https://link.springer.com/chapter/10.1007/978-3-032-38179-8_38">
-                        <papertitle>PhyDiCT: Plug-and-Play CT Reconstruction from Sparse X-Rays via Differentiable Rendering and Strong Priors</papertitle>
-                    </a>
-                    <br>
-                    <strong>Weicheng Dai</strong>, 
-                    <a href="https://shantanu-ai.github.io/">Shantanu Ghosh</a>,
-                    <a href="https://www.batman-lab.com/">Kayhan Batmanghelich</a>,
-                    <br>
-                    <em>Accepted by International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2026)</em>
-                    <p></p>
-                    <p>
-
-PhyDiCT is a training-free, plug-and-play framework for reconstructing 3D lung CT volumes from sparse X-ray projections. It combines a differentiable physics-based forward model grounded in the Beer-Lambert law, a frozen text-conditioned diffusion model as a strong 3D CT prior, and split Gibbs sampling to jointly enforce projection fidelity and prior consistency. Without any task-specific training or fine-tuning, PhyDiCT outperforms fully trained CT reconstruction methods, achieving up to +7.5% SSIM on public 3D CT benchmarks.     
-                    </p>
-                    </td>
-                </tr>	
-
-
-                <tr onmouseout="mira_stop()" onmouseover="mira_start()">
-                    <td style="padding:60px;width:25%;vertical-align:middle">
-                    <div class="one">
-                        <img src='images/CFR.png' width="260">
-                    </div>
-                    </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
-                    <a href="https://arxiv.org/abs/2403.07241">
-                        <papertitle>Calibrating Multi-modal Representations: A Pursuit of Group Robustness without Annotations</papertitle>
-                    </a>
-                    <br>
-                    <a href="http://chenyuyou.me/">Chenyu You</a>,  
-                    <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>,
-                    <strong>Weicheng Dai</strong>,
-                    <a href="https://statistics.yale.edu/people/jas-sekhon">Jasjeet S. Sekhon</a>,
-                    <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>,
-                    <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a>,
-                    <br>
-                    <em>Accepted by The IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR 2024)</em>
-                    <p></p>
-                    <p>
-                        In this work, we propose CFR, which focuses on exploring mitigating the reliance on spurious features for CLIP without using any group annotation. 
+The semantic meaning of the segmentation mask is specified through an accompanying text description, resulting in a highly flexible and scalable conditioning mechanism.</p>
+        </div>
+      </article>
+<article class="paper" aria-labelledby="paper-title-2">
+        <a class="paper-visual" href="https://link.springer.com/chapter/10.1007/978-3-032-38179-8_38" target="_blank" rel="noopener noreferrer" aria-label="Open PhyDiCT: Plug-and-Play CT Reconstruction from Sparse X-Rays via Differentiable Rendering and Strong Priors">
+          <span class="visual-fallback" aria-hidden="true"><span class="visual-grid"></span><span class="visual-no">02</span><span class="visual-name">PhyDiCT</span><span class="visual-bottom">MICCAI / 2026</span></span>
+          <img class="paper-image" src="images/phydict_overview.png" data-fallback="https://weichengdai1.github.io/images/phydict_overview.png" alt="Research illustration for PhyDiCT" loading="lazy" decoding="async">
+          <span class="visual-open" aria-hidden="true">↗</span>
+        </a>
+        <div class="paper-content">
+          <div class="paper-meta"><span class="venue-tag">MICCAI 2026</span><span class="paper-index">NO. 02</span></div>
+          <h3 id="paper-title-2"><a href="https://link.springer.com/chapter/10.1007/978-3-032-38179-8_38" target="_blank" rel="noopener noreferrer">PhyDiCT: Plug-and-Play CT Reconstruction from Sparse X-Rays via Differentiable Rendering and Strong Priors<span class="title-arrow" aria-hidden="true"> ↗</span></a></h3>
+          <p class="authors"><strong>Weicheng Dai</strong>, <a href="https://shantanu-ai.github.io/">Shantanu Ghosh</a>, <a href="https://www.batman-lab.com/">Kayhan Batmanghelich</a></p>
+          <p class="venue-full">Accepted by International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2026)</p>
+          <p class="paper-description">PhyDiCT is a training-free, plug-and-play framework for reconstructing 3D lung CT volumes from sparse X-ray projections. It combines a differentiable physics-based forward model grounded in the Beer-Lambert law, a frozen text-conditioned diffusion model as a strong 3D CT prior, and split Gibbs sampling to jointly enforce projection fidelity and prior consistency. Without any task-specific training or fine-tuning, PhyDiCT outperforms fully trained CT reconstruction methods, achieving up to +7.5% SSIM on public 3D CT benchmarks.</p>
+        </div>
+      </article>
+<article class="paper" aria-labelledby="paper-title-3">
+        <a class="paper-visual" href="https://arxiv.org/abs/2403.07241" target="_blank" rel="noopener noreferrer" aria-label="Open Calibrating Multi-modal Representations: A Pursuit of Group Robustness without Annotations">
+          <span class="visual-fallback" aria-hidden="true"><span class="visual-grid"></span><span class="visual-no">03</span><span class="visual-name">CFR</span><span class="visual-bottom">CVPR / 2024</span></span>
+          <img class="paper-image" src="images/CFR.png" data-fallback="https://weichengdai1.github.io/images/CFR.png" alt="Research illustration for CFR" loading="lazy" decoding="async">
+          <span class="visual-open" aria-hidden="true">↗</span>
+        </a>
+        <div class="paper-content">
+          <div class="paper-meta"><span class="venue-tag">CVPR 2024</span><span class="paper-index">NO. 03</span></div>
+          <h3 id="paper-title-3"><a href="https://arxiv.org/abs/2403.07241" target="_blank" rel="noopener noreferrer">Calibrating Multi-modal Representations: A Pursuit of Group Robustness without Annotations<span class="title-arrow" aria-hidden="true"> ↗</span></a></h3>
+          <p class="authors"><a href="http://chenyuyou.me/">Chenyu You</a>, <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>, <strong>Weicheng Dai</strong>, <a href="https://statistics.yale.edu/people/jas-sekhon">Jasjeet S. Sekhon</a>, <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>, <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a></p>
+          <p class="venue-full">Accepted by The IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR 2024)</p>
+          <p class="paper-description">In this work, we propose CFR, which focuses on exploring mitigating the reliance on spurious features for CLIP without using any group annotation. 
                         We showcase a lightweight representation calibration method for fine-tuning CLIP, by first generating a calibration set using the pretrained CLIP, and then calibrating representations of samples within this set through contrastive learning.</p>
-                    </td>
-                </tr>
-
-
-                <tr onmouseout="mira_stop()" onmouseover="mira_start()">
-                    <td style="padding:60px;width:25%;vertical-align:middle">
-                    <div class="one">
-                        <img src='images/stratified.png' width="260">
-                    </div>
-                    </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
-                    <a href="https://arxiv.org/abs/2302.01735">
-                        <papertitle>Rethinking Semi-Supervised Medical Image Segmentation: A Variance-Reduction Perspective</papertitle>
-                    </a>
-                    <br>
-                    <a href="http://chenyuyou.me/">Chenyu You</a>, <strong>Weicheng Dai</strong>, 
-                    <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>
-                    <a href="https://fenglinliu.com/">Fenglin Liu</a>,
-                    <a href="https://xiaoranzhang.com/">Xiaoran Zhang</a>,
-                    <a href="https://ibme.ox.ac.uk/people/david-clifton/">David A. Clifton</a>,
-                    <a href="https://www.linkedin.com/in/s-kevin-zhou-231a094b/">S Kevin Zhou</a>,
-                    <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>,
-                    <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a>,
-                    <br>
-                    <em>Accepted by Conference on Neural Information Processing Systems (NeurIPS 2023)</em>
-                    <p></p>
-                    <p>
-                        Two practical solutions via stratified group sampling theory that correct for the variance introduced by the common sampling practice, and achieve significant performance benefits. </p>
-                    </td>
-                </tr>
-
-                <tr onmouseout="mira_stop()" onmouseover="mira_start()">
-                    <td style="padding:60px;width:25%;vertical-align:middle">
-                    <div class="one">
-                        <img src='images/mona.jpg' width="260">
-                    </div>
-                    </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
-                    <a href="https://arxiv.org/abs/2209.13476">
-                        <papertitle>Mine yOur owN Anatomy: Revisiting Medical Image Segmentation with Extremely Limited Labels</papertitle>
-                    </a>
-                    <br>
-                    <a href="http://chenyuyou.me/">Chenyu You*</a>, <strong>Weicheng Dai*</strong>, 
-                    <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>,
-                    <a href="https://fenglinliu.com/">Fenglin Liu</a>,
-                    <a href="https://xxlya.github.io/xiaoxiao/">Xiaoxiao Li</a>,
-                    <a href="https://ibme.ox.ac.uk/people/david-clifton/">David A. Clifton</a>,
-                    <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>,
-                    <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a>,
-                    <br>
-                    <em>Accepted by IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI 2023)</em>
-                    <p></p>
-                    <p>
-                        (* denotes equal contribution) Three simple principles: (1) tailness: giving more importance to tail class hard pixels; (2) consistency: enforcing the feature invariances to specified data transformations; (3) diversity: ensuring anatomical diversity in the set of different sampled images in those imbalanced, unlabeled, and diverse scenarios.
-                    </p>
-                    </td>
-                </tr>	
-
-                <tr onmouseout="mira_stop()" onmouseover="mira_start()">
-                    <td style="padding:60px;width:25%;vertical-align:middle">
-                    <div class="one">
-                        <img src='images/action.jpg' width="260">
-                    </div>
-                    </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
-                    <a href="https://arxiv.org/abs/2206.02307">
-                        <papertitle>Bootstrapping Semi-supervised Medical Image Segmentation with Anatomical-aware Contrastive Distillation</papertitle>
-                    </a>
-                    <br>
-                    <a href="http://chenyuyou.me/">Chenyu You</a>, <strong>Weicheng Dai</strong>, 
-                    <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>,
-                    <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>,
-                    <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a>,
-                    <br>
-                    <em>Accepted by Information Processing in Medical Imaging (IPMI 2023)</em>
-                    <p></p>
-                    <p>
-                        In this work, we present ACTION, an Anatomical-aware ConTrastive dIstillatiON framework, for semi-supervised medical image segmentation. 
-                        
-                    </p>
-                    </td>
-                </tr>	
-
-                <tr onmouseout="mira_stop()" onmouseover="mira_start()">
-                    <td style="padding:60px;width:25%;vertical-align:middle">
-                    <div class="one">
-                        <img src='images/implicit.png' width="260">
-                    </div>
-                    </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
-                    <a href="http://arxiv.org/abs/2304.03209">
-                        <papertitle>Implicit Anatomical Rendering for Medical Image Segmentation with Stochastic Experts</papertitle>
-                    </a>
-                    <br>
-                    <a href="http://chenyuyou.me/">Chenyu You</a>, <strong>Weicheng Dai</strong>, 
-                    <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>
-                    <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>,
-                    <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a>,
-                    <br>
-                    <em>Early accepted by International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2023)</em>
-                    <p></p>
-                    <p>
-                        In this work, we propose MORSE, a generic implicit neural rendering framework designed at an anatomical level to assist learning in medical image segmentation. 
-                        The core of our approach is to formulate medical image segmentation as a rendering problem in an end-to-end manner. </p>
-                    </td>
-                </tr>
-
-                <tr onmouseout="mira_stop()" onmouseover="mira_start()">
-                    <td style="padding:60px;width:25%;vertical-align:middle">
-                    <div class="one">
-                        <img src='images/action++.png' width="260">
-                    </div>
-                    </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
-                    <a href="http://arxiv.org/abs/2304.02689">
-                        <papertitle>ACTION++: Improving Semi-supervised Medical Image Segmentation with Adaptive Anatomical Contrast</papertitle>
-                    </a>
-                    <br>
-                    <a href="http://chenyuyou.me/">Chenyu You</a>, <strong>Weicheng Dai</strong>, 
-                    <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>
-                    <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>,
-                    <a href="https://statistics.yale.edu/people/jas-sekhon">Jasjeet S. Sekhon</a>,
-                    <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a>,
-                    <br>
-                    <em>Early accepted by International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2023)</em>
-                    <p></p>
-                    <p>
-                        In this work, we present ACTION++, an improved contrastive learning framework with adaptive anatomical contrast for semi-supervised medical segmentation. We propose an adaptive supervised
+        </div>
+      </article>
+<article class="paper" aria-labelledby="paper-title-4">
+        <a class="paper-visual" href="https://arxiv.org/abs/2302.01735" target="_blank" rel="noopener noreferrer" aria-label="Open Rethinking Semi-Supervised Medical Image Segmentation: A Variance-Reduction Perspective">
+          <span class="visual-fallback" aria-hidden="true"><span class="visual-grid"></span><span class="visual-no">04</span><span class="visual-name">Stratified Sampling</span><span class="visual-bottom">NeurIPS / 2023</span></span>
+          <img class="paper-image" src="images/stratified.png" data-fallback="https://weichengdai1.github.io/images/stratified.png" alt="Research illustration for Stratified Sampling" loading="lazy" decoding="async">
+          <span class="visual-open" aria-hidden="true">↗</span>
+        </a>
+        <div class="paper-content">
+          <div class="paper-meta"><span class="venue-tag">NeurIPS 2023</span><span class="paper-index">NO. 04</span></div>
+          <h3 id="paper-title-4"><a href="https://arxiv.org/abs/2302.01735" target="_blank" rel="noopener noreferrer">Rethinking Semi-Supervised Medical Image Segmentation: A Variance-Reduction Perspective<span class="title-arrow" aria-hidden="true"> ↗</span></a></h3>
+          <p class="authors"><a href="http://chenyuyou.me/">Chenyu You</a>, <strong>Weicheng Dai</strong>, <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a> <a href="https://fenglinliu.com/">Fenglin Liu</a>, <a href="https://xiaoranzhang.com/">Xiaoran Zhang</a>, <a href="https://ibme.ox.ac.uk/people/david-clifton/">David A. Clifton</a>, <a href="https://www.linkedin.com/in/s-kevin-zhou-231a094b/">S Kevin Zhou</a>, <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>, <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a></p>
+          <p class="venue-full">Accepted by Conference on Neural Information Processing Systems (NeurIPS 2023)</p>
+          <p class="paper-description">Two practical solutions via stratified group sampling theory that correct for the variance introduced by the common sampling practice, and achieve significant performance benefits.</p>
+        </div>
+      </article>
+<article class="paper" aria-labelledby="paper-title-5">
+        <a class="paper-visual" href="https://arxiv.org/abs/2209.13476" target="_blank" rel="noopener noreferrer" aria-label="Open Mine yOur owN Anatomy: Revisiting Medical Image Segmentation with Extremely Limited Labels">
+          <span class="visual-fallback" aria-hidden="true"><span class="visual-grid"></span><span class="visual-no">05</span><span class="visual-name">MONA</span><span class="visual-bottom">TPAMI / 2023</span></span>
+          <img class="paper-image" src="images/mona.jpg" data-fallback="https://weichengdai1.github.io/images/mona.jpg" alt="Research illustration for MONA" loading="lazy" decoding="async">
+          <span class="visual-open" aria-hidden="true">↗</span>
+        </a>
+        <div class="paper-content">
+          <div class="paper-meta"><span class="venue-tag">TPAMI 2023</span><span class="paper-index">NO. 05</span></div>
+          <h3 id="paper-title-5"><a href="https://arxiv.org/abs/2209.13476" target="_blank" rel="noopener noreferrer">Mine yOur owN Anatomy: Revisiting Medical Image Segmentation with Extremely Limited Labels<span class="title-arrow" aria-hidden="true"> ↗</span></a></h3>
+          <p class="authors"><a href="http://chenyuyou.me/">Chenyu You*</a>, <strong>Weicheng Dai*</strong>, <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>, <a href="https://fenglinliu.com/">Fenglin Liu</a>, <a href="https://xxlya.github.io/xiaoxiao/">Xiaoxiao Li</a>, <a href="https://ibme.ox.ac.uk/people/david-clifton/">David A. Clifton</a>, <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>, <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a></p>
+          <p class="venue-full">Accepted by IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI 2023)</p>
+          <p class="paper-description">(* denotes equal contribution) Three simple principles: (1) tailness: giving more importance to tail class hard pixels; (2) consistency: enforcing the feature invariances to specified data transformations; (3) diversity: ensuring anatomical diversity in the set of different sampled images in those imbalanced, unlabeled, and diverse scenarios.</p>
+        </div>
+      </article>
+<article class="paper" aria-labelledby="paper-title-6">
+        <a class="paper-visual" href="https://arxiv.org/abs/2206.02307" target="_blank" rel="noopener noreferrer" aria-label="Open Bootstrapping Semi-supervised Medical Image Segmentation with Anatomical-aware Contrastive Distillation">
+          <span class="visual-fallback" aria-hidden="true"><span class="visual-grid"></span><span class="visual-no">06</span><span class="visual-name">ACTION</span><span class="visual-bottom">IPMI / 2023</span></span>
+          <img class="paper-image" src="images/action.jpg" data-fallback="https://weichengdai1.github.io/images/action.jpg" alt="Research illustration for ACTION" loading="lazy" decoding="async">
+          <span class="visual-open" aria-hidden="true">↗</span>
+        </a>
+        <div class="paper-content">
+          <div class="paper-meta"><span class="venue-tag">IPMI 2023</span><span class="paper-index">NO. 06</span></div>
+          <h3 id="paper-title-6"><a href="https://arxiv.org/abs/2206.02307" target="_blank" rel="noopener noreferrer">Bootstrapping Semi-supervised Medical Image Segmentation with Anatomical-aware Contrastive Distillation<span class="title-arrow" aria-hidden="true"> ↗</span></a></h3>
+          <p class="authors"><a href="http://chenyuyou.me/">Chenyu You</a>, <strong>Weicheng Dai</strong>, <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a>, <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>, <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a></p>
+          <p class="venue-full">Accepted by Information Processing in Medical Imaging (IPMI 2023)</p>
+          <p class="paper-description">In this work, we present ACTION, an Anatomical-aware ConTrastive dIstillatiON framework, for semi-supervised medical image segmentation.</p>
+        </div>
+      </article>
+<article class="paper" aria-labelledby="paper-title-7">
+        <a class="paper-visual" href="http://arxiv.org/abs/2304.03209" target="_blank" rel="noopener noreferrer" aria-label="Open Implicit Anatomical Rendering for Medical Image Segmentation with Stochastic Experts">
+          <span class="visual-fallback" aria-hidden="true"><span class="visual-grid"></span><span class="visual-no">07</span><span class="visual-name">MORSE</span><span class="visual-bottom">MICCAI / 2023</span></span>
+          <img class="paper-image" src="images/implicit.png" data-fallback="https://weichengdai1.github.io/images/implicit.png" alt="Research illustration for MORSE" loading="lazy" decoding="async">
+          <span class="visual-open" aria-hidden="true">↗</span>
+        </a>
+        <div class="paper-content">
+          <div class="paper-meta"><span class="venue-tag">MICCAI 2023</span><span class="paper-index">NO. 07</span></div>
+          <h3 id="paper-title-7"><a href="http://arxiv.org/abs/2304.03209" target="_blank" rel="noopener noreferrer">Implicit Anatomical Rendering for Medical Image Segmentation with Stochastic Experts<span class="title-arrow" aria-hidden="true"> ↗</span></a></h3>
+          <p class="authors"><a href="http://chenyuyou.me/">Chenyu You</a>, <strong>Weicheng Dai</strong>, <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a> <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>, <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a></p>
+          <p class="venue-full">Early accepted by International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2023)</p>
+          <p class="paper-description">In this work, we propose MORSE, a generic implicit neural rendering framework designed at an anatomical level to assist learning in medical image segmentation. 
+                        The core of our approach is to formulate medical image segmentation as a rendering problem in an end-to-end manner.</p>
+        </div>
+      </article>
+<article class="paper" aria-labelledby="paper-title-8">
+        <a class="paper-visual" href="http://arxiv.org/abs/2304.02689" target="_blank" rel="noopener noreferrer" aria-label="Open ACTION++: Improving Semi-supervised Medical Image Segmentation with Adaptive Anatomical Contrast">
+          <span class="visual-fallback" aria-hidden="true"><span class="visual-grid"></span><span class="visual-no">08</span><span class="visual-name">ACTION++</span><span class="visual-bottom">MICCAI / 2023</span></span>
+          <img class="paper-image" src="images/action++.png" data-fallback="https://weichengdai1.github.io/images/action++.png" alt="Research illustration for ACTION++" loading="lazy" decoding="async">
+          <span class="visual-open" aria-hidden="true">↗</span>
+        </a>
+        <div class="paper-content">
+          <div class="paper-meta"><span class="venue-tag">MICCAI 2023</span><span class="paper-index">NO. 08</span></div>
+          <h3 id="paper-title-8"><a href="http://arxiv.org/abs/2304.02689" target="_blank" rel="noopener noreferrer">ACTION++: Improving Semi-supervised Medical Image Segmentation with Adaptive Anatomical Contrast<span class="title-arrow" aria-hidden="true"> ↗</span></a></h3>
+          <p class="authors"><a href="http://chenyuyou.me/">Chenyu You</a>, <strong>Weicheng Dai</strong>, <a href="https://www.linkedin.com/in/yifei-min-21957254/">Yifei Min</a> <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>, <a href="https://statistics.yale.edu/people/jas-sekhon">Jasjeet S. Sekhon</a>, <a href="https://seas.yale.edu/faculty-research/faculty-directory/james-duncan">James S. Duncan</a></p>
+          <p class="venue-full">Early accepted by International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2023)</p>
+          <p class="paper-description">In this work, we present ACTION++, an improved contrastive learning framework with adaptive anatomical contrast for semi-supervised medical segmentation. We propose an adaptive supervised
                         contrastive loss, where we compute the optimal locations of class
-                        centers uniformly distributed on the embedding space. We also use dynamic Tau to yield better separation between majority and minority classe. </p>
-                    </td>
-                </tr>
-
-
-            </td>
-        </tr>
-
-
-    </tbody>
-    </table>
-
+                        centers uniformly distributed on the embedding space. We also use dynamic Tau to yield better separation between majority and minority classe.</p>
+        </div>
+      </article>
+      </div>
+    </section>
+  </main>
+  <footer class="footer container"><span>© 2026 Weicheng Dai. All research descriptions retained from the original website.</span><a class="back-top" href="#top">Back to top ↑</a></footer>
+  <script>
+  (function () {
+    const toggle=document.getElementById('theme-toggle');
+    function isDark() { const manual=document.documentElement.dataset.theme; return manual ? manual==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches; }
+    function updateButton() {
+      toggle.setAttribute('aria-label', isDark()?'Switch to light appearance':'Switch to dark appearance');
+      toggle.title=isDark()?'Switch to light appearance':'Switch to dark appearance';
+    }
+    toggle.addEventListener('click',function() {
+      const next=isDark()?'light':'dark';document.documentElement.dataset.theme=next;
+      try {localStorage.setItem('wd-theme',next)} catch(e) {}
+      updateButton();
+    });
+    updateButton();
+    // Existing images/ paths remain valid on GitHub Pages. Remote fallback also allows
+    // this HTML to be previewed outside the original repository.
+    document.querySelectorAll('img[data-fallback]').forEach(img=>{
+      img.addEventListener('error',function() {
+        if(!img.dataset.triedRemote) {img.dataset.triedRemote='yes';img.src=img.dataset.fallback;}
+        else {img.classList.add('is-broken'); if(img.id==='portrait')img.style.display='none';}
+      });
+    });
+  })();
+  </script>
 </body>
 </html>
